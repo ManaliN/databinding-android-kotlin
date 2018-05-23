@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Databinding-Listview-Example</string>
+    <string name="search_label">Search Github Repositories</string>
+    <string name="search_test">Enter here</string>
+    <string name="search_button_label">Search!</string>
+    <string name="searching">Searching!</string>
+    <string name="result_not_found">Result not Found!</string>
+    <string name="server_not_available">Server not available!</string>
+    <string name="enter_valid_search_string">Please enter valid search string!</string>
+</resources>

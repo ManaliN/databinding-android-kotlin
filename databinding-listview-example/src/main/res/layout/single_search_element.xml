@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="searchResultViewModel"
+            type="com.github.databinding.listviewexample.data.SearchResultViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <com.github.databinding.listviewexample.customview.CustomImageView
+            android:id="@+id/avatar_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:imageURL="@{searchResultViewModel.ownerAvatar}"
+            android:gravity="center"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:textStyle="bold"
+                android:textSize="@dimen/medium_text"
+                android:text="@{searchResultViewModel.repositoryName}"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:text="@{searchResultViewModel.description}"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:text="@{searchResultViewModel.numberOfStars}"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
